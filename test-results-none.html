@@ -56,9 +56,12 @@ You need a test.
 </span>
 <br>
 <br>
-<a class="ui-btn ui-btn-a tsize1" href="collection-sites1.html" rel="external">Drug And Alcohol Testing<br>
+<!--<a class="ui-btn ui-btn-a tsize1" href="collection-sites1.html" rel="external">Drug And Alcohol Testing<br>
+Collection Sites</a> -->
+
+<a class="ui-btn ui-btn-a tsize1" onclick="return buildURL(this)" rel="external">Drug And Alcohol Testing<br>
 Collection Sites</a>
- 
+
 
 <!--
 <a class="buttonlink7" href="client-update-contact.html" rel="external"> <span class="bigfont2">Update My Contact Info</span> </a>
@@ -71,6 +74,35 @@ Collection Sites</a>
 localStorage.setItem("pre_emp_completecheck", 'foundzero');
 
 </script>
+
+
+
+<script>
+
+
+
+
+if (
+localStorage.getItem("cl_toc_toc_collect_type") == '2'
+) {
+var gocolpage = "collection-sites2.html";
+} else if (
+localStorage.getItem("cl_toc_toc_collect_type") != '2'
+){
+var gocolpage = "collection-sites1.html";
+}else{
+var gocolpage = "collection-sites1.html";		
+}
+
+
+// this for links on top
+function buildURL(item)
+{
+	item.href=gocolpage;
+    return true;
+}
+</script>
+
 
 
 
